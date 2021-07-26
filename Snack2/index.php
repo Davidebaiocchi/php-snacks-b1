@@ -15,7 +15,18 @@ if(strlen($name) > 3 && (strpos($mail, '@') && strpos($mail, '.')) && is_numeric
   } else{
     $mex = 'Accesso negato! Rincontrolla! ';
     
+if(strlen($name) <= 3){
+    $mex .= 'Il nome deve avere almeno 3 caratteri.  ';
+    }
+    if(!strpos($mail, '@') || !strpos($mail, '.')){
+    $mex .= 'La mail deve contenere almeno un punto e la @. ';
+    }
+    if(!is_numeric($age)){
+    $mex .= 'Inserisci gli anni in numeri. ';
+    }    
 
+    echo $mex;
+}
 
 ?>
 

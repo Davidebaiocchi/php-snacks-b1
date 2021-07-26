@@ -24,7 +24,6 @@ if(strlen($name) <= 3){
     if(!is_numeric($age)){
     $mex .= 'Inserisci gli anni in numeri. ';
     }    
-
     echo $mex;
 }
 
